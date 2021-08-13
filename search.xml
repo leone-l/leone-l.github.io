@@ -55,6 +55,57 @@
       </tags>
   </entry>
   <entry>
+    <title>Hexo-theme-diaspora</title>
+    <url>/2020/07/21/Hexo-theme-diaspora/</url>
+    <content><![CDATA[<h1 id="Hexo-theme-diaspora"><a href="#Hexo-theme-diaspora" class="headerlink" title="Hexo-theme-diaspora"></a>Hexo-theme-diaspora</h1><p><strong><a href="http://fech.in" target="_blank" rel="noopener">在线预览 | PREVIEW </a></strong></p>
+<p>一款基于WP移植的Hexo主题，适合喜欢摄影，影评，乐评和玩弄文字的你，干净，清新； 响应式，Ajax，更多好玩的等你来发现。</p>
+<blockquote>
+<p>再次感谢原作者创作出这么精美的主题 <a href="https://github.com/LoeiFy/Diaspora" target="_blank" rel="noopener">@Loeify</a> 。如果你喜欢，请捐助原作者。</p>
+</blockquote>
+<p><img src="https://fech.in/static/images/Diaspora.jpg" alt="cover"></p>
+<h3 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/Fechin/hexo-theme-diaspora.git themes/diaspora</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="启用主题"><a href="#启用主题" class="headerlink" title="启用主题"></a>启用主题</h3><p>修改Hexo配置文件 <code>_config.yml</code> 主题项设置为diaspora</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="string">...</span></span><br><span class="line"><span class="attr">theme:</span> <span class="string">diaspora</span></span><br><span class="line"><span class="string">...</span></span><br></pre></td></tr></table></figure>
+<h3 id="更新主题"><a href="#更新主题" class="headerlink" title="更新主题"></a>更新主题</h3><p>注意：请在更时主题时备份<code>_config.yml</code>配置文件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> themes/diaspora</span><br><span class="line">git pull</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="新建文章模板"><a href="#新建文章模板" class="headerlink" title="新建文章模板"></a>新建文章模板</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: My awesome title</span><br><span class="line">date: 2016-10-12 18:38:45</span><br><span class="line">categories:</span><br><span class="line"><span class="bullet">    - </span>分类1</span><br><span class="line"><span class="bullet">    - </span>分类2</span><br><span class="line">tags:</span><br><span class="line"><span class="bullet">    - </span>标签1</span><br><span class="line"><span class="bullet">    - </span>标签2</span><br><span class="line">mp3: http://domain.com/awesome.mp3</span><br><span class="line">cover: http://domain.com/awesome.jpg</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<h3 id="创建分类页"><a href="#创建分类页" class="headerlink" title="创建分类页"></a>创建分类页</h3><p>1 新建一个页面，命名为 categories 。命令如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new page categories</span><br></pre></td></tr></table></figure>
+<p>2 编辑刚新建的页面，将页面的类型设置为 categories</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">title: categories</span><br><span class="line">date: 2014-12-22 12:39:04</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>主题将自动为这个页面显示所有分类。</p>
+<h3 id="创建标签页"><a href="#创建标签页" class="headerlink" title="创建标签页"></a>创建标签页</h3><p>1 新建一个页面，命名为 tags 。命令如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new page tags</span><br></pre></td></tr></table></figure>
+<p>2 编辑刚新建的页面，将页面的类型设置为 tags</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">title: tags</span><br><span class="line">date: 2014-12-22 12:39:04</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>主题将自动为这个页面显示所有标签。</p>
+<h3 id="创建搜索页"><a href="#创建搜索页" class="headerlink" title="创建搜索页"></a>创建搜索页</h3><p>1 需要安装hexo的搜索插件</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
+
+<p>2 配置hexo全局配置文件（请将生成的索引文件放在网站根目录或修改主题js文件的path值）</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">search:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">search.xml</span></span><br><span class="line">  <span class="attr">field:</span> <span class="string">post</span></span><br><span class="line">  <span class="attr">format:</span> <span class="string">html</span></span><br><span class="line">  <span class="attr">limit:</span> <span class="number">10000</span></span><br></pre></td></tr></table></figure>
+
+<p>3 新建一个页面，命名为 search 。命令如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new page search</span><br></pre></td></tr></table></figure>
+<p>4 编辑刚新建的页面，将页面的类型设置为 search</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">title: search</span><br><span class="line">date: 2014-12-22 12:39:04</span><br><span class="line">type: &quot;search&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>5 在主题配置文件启用本地搜索</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment">#本地搜索,请将索引文件放在网站根目录</span></span><br><span class="line"><span class="attr">local_search:</span></span><br><span class="line">    <span class="comment">#是否启用</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<p>主题将自动为这个页面显示搜索功能。</p>
+<h3 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h3><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 头部菜单，title: link</span></span><br><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="string">首页:</span> <span class="string">/</span></span><br><span class="line">  <span class="string">分类:</span> <span class="string">/categories</span></span><br><span class="line">  <span class="string">标签:</span> <span class="string">/tags</span></span><br><span class="line">  <span class="string">归档:</span> <span class="string">/archives</span></span><br><span class="line">  <span class="string">关于:</span> <span class="string">/about</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 是否显示目录</span></span><br><span class="line"><span class="attr">TOC:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 是否自动播放音乐</span></span><br><span class="line"><span class="attr">autoplay:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 默认音乐（随机播放）</span></span><br><span class="line"><span class="attr">mp3:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">http://link.hhtjim.com/163/425570952.mp3</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">http://link.hhtjim.com/163/425570952.mp3</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 首页封面图, 为空时取文章的cover作为封面(注意跨域问题,建议使用同源图片)</span></span><br><span class="line"><span class="attr">welcome_cover:</span> <span class="string">/img/welcome-cover.jpg</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 默认文章封面图（随机调用,支持外链）</span></span><br><span class="line"><span class="attr">cover:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">/img/cover.jpg</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">/img/welcome-cover.jpg</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 是否关闭默认滚动条</span></span><br><span class="line"><span class="attr">scrollbar:</span> <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 本地搜索,请将索引文件放在网站根目录,或修改主题js文件的path值</span></span><br><span class="line"><span class="attr">local_search:</span></span><br><span class="line">    <span class="comment"># 是否启用</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 是否显示 一言(hitokoto)</span></span><br><span class="line"><span class="attr">hitokoto:</span> <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 链接(可选:facebook,twitter,github,wechat,email)</span></span><br><span class="line"><span class="attr">links:</span></span><br><span class="line">    <span class="attr">facebook:</span> <span class="string">/</span></span><br><span class="line">    <span class="attr">twitter:</span> <span class="string">/</span></span><br><span class="line">    <span class="attr">github:</span> <span class="string">/</span></span><br><span class="line">    <span class="attr">wechat:</span> <span class="string">/img/logo.png</span></span><br><span class="line">    <span class="attr">email:</span> <span class="string">mailto:xxxx@gmail.com</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 备案</span></span><br><span class="line"><span class="attr">beian:</span></span><br><span class="line">    <span class="comment"># 是否显示备案信息</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">    <span class="comment"># 是否在主页面最底下显示备案信息(虽然丑，但是完全满足规定要求)</span></span><br><span class="line">    <span class="attr">enableFooter:</span> <span class="literal">false</span></span><br><span class="line">    <span class="comment"># 备案号</span></span><br><span class="line">    <span class="attr">beianInfo:</span> <span class="string">冀ICP备xxxxxxx号</span></span><br><span class="line">    <span class="comment"># 链接地址</span></span><br><span class="line">    <span class="attr">link:</span> <span class="string">http://www.beian.miit.gov.cn</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 是否使用mathjax</span></span><br><span class="line"><span class="attr">mathjax:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Gitalk 评论插件（https://github.com/gitalk/gitalk）</span></span><br><span class="line"><span class="attr">gitalk:</span></span><br><span class="line">    <span class="comment"># 是否启用评论功能</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">false</span></span><br><span class="line">    <span class="comment"># 是否自动展开评论框</span></span><br><span class="line">    <span class="attr">autoExpand:</span> <span class="literal">false</span></span><br><span class="line">    <span class="comment"># 应用编号</span></span><br><span class="line">    <span class="attr">clientID:</span> <span class="string">''</span></span><br><span class="line">    <span class="comment"># 应用秘钥</span></span><br><span class="line">    <span class="attr">clientSecret:</span> <span class="string">''</span></span><br><span class="line">    <span class="comment"># issue仓库名</span></span><br><span class="line">    <span class="attr">repo:</span> <span class="string">''</span></span><br><span class="line">    <span class="comment"># Github名</span></span><br><span class="line">    <span class="attr">owner:</span> <span class="string">''</span></span><br><span class="line">    <span class="comment"># Github名</span></span><br><span class="line">    <span class="attr">admin:</span> <span class="string">['']</span></span><br><span class="line">    <span class="comment"># Ensure uniqueness and length less than 50</span></span><br><span class="line">    <span class="attr">id:</span> <span class="string">location.pathname</span></span><br><span class="line">    <span class="comment"># Facebook-like distraction free mode</span></span><br><span class="line">    <span class="attr">distractionFreeMode:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 网站关键字</span></span><br><span class="line"><span class="attr">keywords:</span> <span class="string">Fechin</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 要使用google_analytics进行统计的话，这里需要配置ID</span></span><br><span class="line"><span class="attr">google_analytics:</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 网站ico</span></span><br><span class="line"><span class="attr">favicon:</span> <span class="string">/img/favicon.png</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># rss文件</span></span><br><span class="line"><span class="attr">rss:</span> <span class="string">atom.xml</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>分享</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>B站游戏的水逆与反击</title>
     <url>/2021/05/16/B%E7%AB%99%E6%B8%B8%E6%88%8F%E7%9A%84%E6%B0%B4%E9%80%86%E4%B8%8E%E5%8F%8D%E5%87%BB/</url>
     <content><![CDATA[<h1 id="B站游戏的水逆与反击"><a href="#B站游戏的水逆与反击" class="headerlink" title="B站游戏的水逆与反击"></a>B站游戏的水逆与反击</h1><p>B站能重返二次元荣光吗？</p>
@@ -160,55 +211,9 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo-theme-diaspora</title>
-    <url>/2020/07/21/Hexo-theme-diaspora/</url>
-    <content><![CDATA[<h1 id="Hexo-theme-diaspora"><a href="#Hexo-theme-diaspora" class="headerlink" title="Hexo-theme-diaspora"></a>Hexo-theme-diaspora</h1><p><strong><a href="http://fech.in" target="_blank" rel="noopener">在线预览 | PREVIEW </a></strong></p>
-<p>一款基于WP移植的Hexo主题，适合喜欢摄影，影评，乐评和玩弄文字的你，干净，清新； 响应式，Ajax，更多好玩的等你来发现。</p>
-<blockquote>
-<p>再次感谢原作者创作出这么精美的主题 <a href="https://github.com/LoeiFy/Diaspora" target="_blank" rel="noopener">@Loeify</a> 。如果你喜欢，请捐助原作者。</p>
-</blockquote>
-<p><img src="https://fech.in/static/images/Diaspora.jpg" alt="cover"></p>
-<h3 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/Fechin/hexo-theme-diaspora.git themes/diaspora</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="启用主题"><a href="#启用主题" class="headerlink" title="启用主题"></a>启用主题</h3><p>修改Hexo配置文件 <code>_config.yml</code> 主题项设置为diaspora</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="string">...</span></span><br><span class="line"><span class="attr">theme:</span> <span class="string">diaspora</span></span><br><span class="line"><span class="string">...</span></span><br></pre></td></tr></table></figure>
-<h3 id="更新主题"><a href="#更新主题" class="headerlink" title="更新主题"></a>更新主题</h3><p>注意：请在更时主题时备份<code>_config.yml</code>配置文件</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> themes/diaspora</span><br><span class="line">git pull</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="新建文章模板"><a href="#新建文章模板" class="headerlink" title="新建文章模板"></a>新建文章模板</h3><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: My awesome title</span><br><span class="line">date: 2016-10-12 18:38:45</span><br><span class="line">categories:</span><br><span class="line"><span class="bullet">    - </span>分类1</span><br><span class="line"><span class="bullet">    - </span>分类2</span><br><span class="line">tags:</span><br><span class="line"><span class="bullet">    - </span>标签1</span><br><span class="line"><span class="bullet">    - </span>标签2</span><br><span class="line">mp3: http://domain.com/awesome.mp3</span><br><span class="line">cover: http://domain.com/awesome.jpg</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-
-<h3 id="创建分类页"><a href="#创建分类页" class="headerlink" title="创建分类页"></a>创建分类页</h3><p>1 新建一个页面，命名为 categories 。命令如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new page categories</span><br></pre></td></tr></table></figure>
-<p>2 编辑刚新建的页面，将页面的类型设置为 categories</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">title: categories</span><br><span class="line">date: 2014-12-22 12:39:04</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-<p>主题将自动为这个页面显示所有分类。</p>
-<h3 id="创建标签页"><a href="#创建标签页" class="headerlink" title="创建标签页"></a>创建标签页</h3><p>1 新建一个页面，命名为 tags 。命令如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new page tags</span><br></pre></td></tr></table></figure>
-<p>2 编辑刚新建的页面，将页面的类型设置为 tags</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">title: tags</span><br><span class="line">date: 2014-12-22 12:39:04</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-<p>主题将自动为这个页面显示所有标签。</p>
-<h3 id="创建搜索页"><a href="#创建搜索页" class="headerlink" title="创建搜索页"></a>创建搜索页</h3><p>1 需要安装hexo的搜索插件</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
-
-<p>2 配置hexo全局配置文件（请将生成的索引文件放在网站根目录或修改主题js文件的path值）</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">search:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">search.xml</span></span><br><span class="line">  <span class="attr">field:</span> <span class="string">post</span></span><br><span class="line">  <span class="attr">format:</span> <span class="string">html</span></span><br><span class="line">  <span class="attr">limit:</span> <span class="number">10000</span></span><br></pre></td></tr></table></figure>
-
-<p>3 新建一个页面，命名为 search 。命令如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new page search</span><br></pre></td></tr></table></figure>
-<p>4 编辑刚新建的页面，将页面的类型设置为 search</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">title: search</span><br><span class="line">date: 2014-12-22 12:39:04</span><br><span class="line">type: &quot;search&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-
-<p>5 在主题配置文件启用本地搜索</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment">#本地搜索,请将索引文件放在网站根目录</span></span><br><span class="line"><span class="attr">local_search:</span></span><br><span class="line">    <span class="comment">#是否启用</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-
-<p>主题将自动为这个页面显示搜索功能。</p>
-<h3 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h3><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 头部菜单，title: link</span></span><br><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="string">首页:</span> <span class="string">/</span></span><br><span class="line">  <span class="string">分类:</span> <span class="string">/categories</span></span><br><span class="line">  <span class="string">标签:</span> <span class="string">/tags</span></span><br><span class="line">  <span class="string">归档:</span> <span class="string">/archives</span></span><br><span class="line">  <span class="string">关于:</span> <span class="string">/about</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 是否显示目录</span></span><br><span class="line"><span class="attr">TOC:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 是否自动播放音乐</span></span><br><span class="line"><span class="attr">autoplay:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 默认音乐（随机播放）</span></span><br><span class="line"><span class="attr">mp3:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">http://link.hhtjim.com/163/425570952.mp3</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">http://link.hhtjim.com/163/425570952.mp3</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 首页封面图, 为空时取文章的cover作为封面(注意跨域问题,建议使用同源图片)</span></span><br><span class="line"><span class="attr">welcome_cover:</span> <span class="string">/img/welcome-cover.jpg</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 默认文章封面图（随机调用,支持外链）</span></span><br><span class="line"><span class="attr">cover:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">/img/cover.jpg</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">/img/welcome-cover.jpg</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 是否关闭默认滚动条</span></span><br><span class="line"><span class="attr">scrollbar:</span> <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 本地搜索,请将索引文件放在网站根目录,或修改主题js文件的path值</span></span><br><span class="line"><span class="attr">local_search:</span></span><br><span class="line">    <span class="comment"># 是否启用</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 是否显示 一言(hitokoto)</span></span><br><span class="line"><span class="attr">hitokoto:</span> <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 链接(可选:facebook,twitter,github,wechat,email)</span></span><br><span class="line"><span class="attr">links:</span></span><br><span class="line">    <span class="attr">facebook:</span> <span class="string">/</span></span><br><span class="line">    <span class="attr">twitter:</span> <span class="string">/</span></span><br><span class="line">    <span class="attr">github:</span> <span class="string">/</span></span><br><span class="line">    <span class="attr">wechat:</span> <span class="string">/img/logo.png</span></span><br><span class="line">    <span class="attr">email:</span> <span class="string">mailto:xxxx@gmail.com</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 备案</span></span><br><span class="line"><span class="attr">beian:</span></span><br><span class="line">    <span class="comment"># 是否显示备案信息</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">    <span class="comment"># 是否在主页面最底下显示备案信息(虽然丑，但是完全满足规定要求)</span></span><br><span class="line">    <span class="attr">enableFooter:</span> <span class="literal">false</span></span><br><span class="line">    <span class="comment"># 备案号</span></span><br><span class="line">    <span class="attr">beianInfo:</span> <span class="string">冀ICP备xxxxxxx号</span></span><br><span class="line">    <span class="comment"># 链接地址</span></span><br><span class="line">    <span class="attr">link:</span> <span class="string">http://www.beian.miit.gov.cn</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 是否使用mathjax</span></span><br><span class="line"><span class="attr">mathjax:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Gitalk 评论插件（https://github.com/gitalk/gitalk）</span></span><br><span class="line"><span class="attr">gitalk:</span></span><br><span class="line">    <span class="comment"># 是否启用评论功能</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">false</span></span><br><span class="line">    <span class="comment"># 是否自动展开评论框</span></span><br><span class="line">    <span class="attr">autoExpand:</span> <span class="literal">false</span></span><br><span class="line">    <span class="comment"># 应用编号</span></span><br><span class="line">    <span class="attr">clientID:</span> <span class="string">''</span></span><br><span class="line">    <span class="comment"># 应用秘钥</span></span><br><span class="line">    <span class="attr">clientSecret:</span> <span class="string">''</span></span><br><span class="line">    <span class="comment"># issue仓库名</span></span><br><span class="line">    <span class="attr">repo:</span> <span class="string">''</span></span><br><span class="line">    <span class="comment"># Github名</span></span><br><span class="line">    <span class="attr">owner:</span> <span class="string">''</span></span><br><span class="line">    <span class="comment"># Github名</span></span><br><span class="line">    <span class="attr">admin:</span> <span class="string">['']</span></span><br><span class="line">    <span class="comment"># Ensure uniqueness and length less than 50</span></span><br><span class="line">    <span class="attr">id:</span> <span class="string">location.pathname</span></span><br><span class="line">    <span class="comment"># Facebook-like distraction free mode</span></span><br><span class="line">    <span class="attr">distractionFreeMode:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 网站关键字</span></span><br><span class="line"><span class="attr">keywords:</span> <span class="string">Fechin</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 要使用google_analytics进行统计的话，这里需要配置ID</span></span><br><span class="line"><span class="attr">google_analytics:</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 网站ico</span></span><br><span class="line"><span class="attr">favicon:</span> <span class="string">/img/favicon.png</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># rss文件</span></span><br><span class="line"><span class="attr">rss:</span> <span class="string">atom.xml</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>分享</tag>
-      </tags>
+    <title>Hexo常见指令</title>
+    <url>/2021/08/13/Hexo%E5%B8%B8%E8%A7%81%E6%8C%87%E4%BB%A4/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>Noah&#39;s Ark&#39;s Plan 诺亚方舟计划</title>
@@ -272,6 +277,111 @@
 ]]></content>
       <tags>
         <tag>项目</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>iPhone12首个工程机解密：高刷、激光雷达实锤，解密五大疑团</title>
+    <url>/2020/08/29/iPhone12%E9%A6%96%E4%B8%AA%E5%B7%A5%E7%A8%8B%E6%9C%BA%E8%A7%A3%E5%AF%86%EF%BC%9A%E9%AB%98%E5%88%B7%E3%80%81%E6%BF%80%E5%85%89%E9%9B%B7%E8%BE%BE%E5%AE%9E%E9%94%A4%EF%BC%8C%E8%A7%A3%E5%AF%86%E4%BA%94%E5%A4%A7%E7%96%91%E5%9B%A2/</url>
+    <content><![CDATA[<blockquote>
+<p>这可能是iPhone 12发布之前，最全的一次剧透了。</p>
+</blockquote>
+<hr>
+<p>作者 云鹏</p>
+<p>智东西8月26日消息，今天知名苹果爆料人Jon Prosser发布了关于iPhone 12 Pro Max“工程机”的关键信息，根据爆料，iPhone 12 Pro Max“很可能”将采用120Hz高刷屏，并且激光雷达确认搭载，将为相机提供自动对焦支持。</p>
+<p>目前这些泄露的信息均来自iPhone 12 Pro  Max的PVT（Production Validation Test）机型，也就是“生产验证测试”机型，Jon  Prosser说，PVT已经是量产前的最后一步了，因此PVT版本与最终的量产版本之间的差别已经非常小了，可参考的价值非常高。</p>
+<p><img src="https://img.36krcdn.com/20200827/v2_d20a9568f1f846bf9a4ac9c288d066e8_img_000" alt="img"></p>
+<p><em>▲Prosser给出的关于PVT机型的说明</em></p>
+<p>不过，PVT机型的出炉也侧面证明了，今年的iPhone 12系列生产的确向后延迟了，有一些国内网友也表示，过去富士康这个时候早就大批量招工了，但今年显然推迟了招工时间。Prosser称，iPhone 12系列的大规模批量生产将在下个月进行。<br><img src="https://img.36krcdn.com/20200827/v2_ae7c9cd7eca240c69be340b5f91f7e66_img_000" alt="img"></p>
+<p><em>▲Jon Prosser</em></p>
+<p>另外从Prosser发布的视频来看，由于“极窄边框”和更大的屏幕，iPhone 12 Pro Max的刘海看起来更小了，并且由于电池规模缩小，整机的重量更轻。今天有外媒报道称，苹果正在研究将AirPods  Pro用到的SiP封装工艺应用于电池电路板的设计中，这无疑会成为改善手机内部空间利用率的又一重要技术尝试。</p>
+<p>现在已经是9月最后一周，iPhone  12系列的预计售价、外观设计、芯片性能、拍照模组、屏幕刷新率、电池容量等关键信息均已曝光，很多信息都已经接近“实锤”。苹果iPhone  12系列的正式发布，无疑成为整个智能手机行业下半年最重要的事件之一，作为苹果的首款5G手机，iPhone  12可能是苹果通往3万亿市值的重要一步。</p>
+<p>因此我们将在这个关键节点，对iPhone 12系列进行一次“终极剧透”。<br><img src="https://img.36krcdn.com/20200827/v2_53ae1f5af7224be2994af864fed74062_img_000" alt="img"></p>
+<p><em>▲iPhone 12系列部分机型曝光模具与其他iPhone机型的对比</em></p>
+<h3 id="苹果120Hz仍在验证，“高刷选项”已出现"><a href="#苹果120Hz仍在验证，“高刷选项”已出现" class="headerlink" title="苹果120Hz仍在验证，“高刷选项”已出现"></a>苹果120Hz仍在验证，“高刷选项”已出现</h3><p>关于新iPhone 12系列，最引人关注的，除了价格，就是屏幕刷新率的问题。从2019年5月开始，安卓阵营就已经快速踏入了高刷新率时代，90Hz机型频频发布，今年2月，三星S20系列也采用了120Hz屏幕，正式加入高刷阵营。</p>
+<p>目前在全球出货量排名前六的智能手机厂商中，仅剩苹果没有采用高刷新率屏幕，依然是60Hz，诚然，iOS系统的高流畅度可以一定程度上缓解没有高刷的问题，但50%或者一倍的帧数差距确是实际存在的。</p>
+<p>这一次，Prosser曝光的iPhone 12 Pro Max PVT机型的系统显示设置中，增加了高刷新率选项，允许开启120Hz模式。</p>
+<p><img src="https://img.36krcdn.com/20200827/v2_ea5bb7d1017445af82b2bc39f3ce10f5_img_000" alt="img"></p>
+<p><em>▲iPhone 12 Pro Max PVT机型中的高刷新率及自适应刷新率选项</em></p>
+<p>但是有意思的是，并不是所有PVT机型都能支持120Hz刷新率，Prosser说，他被告知大约有一半的机器是可以开启的，另一半不支持。这说明了一个问题，苹果直到现在还没有最终敲定，120Hz是上，还是不上。</p>
+<p>也就是说，即便下个月马上就要大规模量产了，苹果现在仍然在测试120Hz的可行性，可以说，苹果的确有一颗“大心脏”，同时供应链的生产能力也足够让苹果放心。当然，苹果一定是愿意克服困难将其实现的，毕竟一旦实现，这将成为新iPhone 12系列的另一项重要优势。</p>
+<p>Prosser称，他的消息来源曾对他说，目前通过系统选项手动开启的120Hz，在iPhone 12 Pro Max上暂时运行正常。</p>
+<p><img src="https://img.36krcdn.com/20200827/v2_c873bbeb3d9d4dd680edeab5711c53ad_img_000" alt="img"></p>
+<p><em>▲Prosser的消息来源对于120Hz高刷运行情况的描述</em></p>
+<p><img src="https://img.36krcdn.com/20200827/v2_8c292554fa67487abb9b3d29a9221662_img_000" alt="img"></p>
+<p><em>▲为了保证系统选项截图的真实性，Prosser录制了视频来证明</em></p>
+<p>除了高刷新率选项，苹果还提供了一个“自适应刷新率（Adaptive Refresh  Rate）”选项，允许系统动态调整屏幕刷新率，从60Hz到120Hz，这与三星S20系列和N20系列的高刷选项是一样的，都是自适应刷新率，这样做也是为了节省功耗，延长电池寿命。</p>
+<p>其实早在2017年的iPad  Pro上，苹果就采用了120Hz的LCD屏幕。可以说，苹果对高刷并不陌生，甚至用在产品中的时间要早于很多安卓手机厂商，但后来苹果一直没有将120Hz下放到iPhone上，有业内人士认为苹果对高刷要求很高，很多地方都要慢慢优化，拖了三年，看来苹果终于要“交卷”了。</p>
+<p><img src="https://img.36krcdn.com/20200827/v2_eca7332dc6df4e608634361b44710a0b_img_000" alt="img"></p>
+<p><em>▲2017年首款搭载120Hz屏幕的iPad Pro发布</em></p>
+<p>从7月底到8月整月，关于iPhone 12系列是否将采用高刷的讨论就一直没有停止，进入八月下旬，许多曝光博主都表示苹果很可能将放弃120Hz高刷了。这一次，Prosser的截图和视频无疑大幅提升了iPhone 12系列将采用120Hz高刷的可能性。</p>
+<h3 id="第一部搭载激光雷达的手机来了"><a href="#第一部搭载激光雷达的手机来了" class="headerlink" title="第一部搭载激光雷达的手机来了"></a>第一部搭载激光雷达的手机来了</h3><p>根据Prosser展示的一张系统相机设置的截图来看，激光雷达已经确认将会出现在iPhone 12 Pro Max上，但是否会在iPhone 12、iPhone 12 Max以及iPhone 12 Pro上出现仍然不能确定。</p>
+<p><img src="https://img.36krcdn.com/20200827/v2_636690bca6b0475aaa721dea2dc6c9bb_img_000" alt="img"></p>
+<p><em>▲iPhone 12 Pro Max PVT机型中的激光雷达选项</em></p>
+<p>iPhone 12 Pro Max上的这枚激光雷达的主要功能是辅助相机进行自动对焦，同时提升视频拍摄和夜景拍摄时的目标检测能力。</p>
+<p>值得一提的是，iPhone 12 Pro  Max将支持最高4K 120FPS的视频录制以及4K 240FPS的慢动作拍摄。目前主流的安卓旗舰手机普遍最高仅支持4K  60FPS的视频拍摄，可以说，在iPhone本就明显具有优势的视频拍摄领域，苹果又进一步甩开了竞争对手们。</p>
+<p><img src="https://img.36krcdn.com/20200827/v2_03baae98e91c4feeb6291952c11ea233_img_000" alt="img"></p>
+<p><em>▲iPhone 12 Pro Max PVT机型中的增强视频拍摄选项</em></p>
+<p><img src="https://img.36krcdn.com/20200827/v2_66f2a743ddf74f5db5a4e1a7638eb6b8_img_000" alt="img"></p>
+<p><em>▲iPhone 12 Pro Max PVT机型中的高级降噪、高色深拍摄、变焦等选项</em></p>
+<h3 id="“小”刘海，“大”相机，边框不再“停航母”"><a href="#“小”刘海，“大”相机，边框不再“停航母”" class="headerlink" title="“小”刘海，“大”相机，边框不再“停航母”"></a>“小”刘海，“大”相机，边框不再“停航母”</h3><p>除了屏幕和拍照，iPhone 12系列到底长什么样子，有没有刘海，刘海有多大？也是备受关注的，毕竟现在旗舰手机也进入了一个“看脸”的时代。</p>
+<p>根据Prosser曝光的视频来看，iPhone 12 Pro Max仍然会采用刘海屏设计，由于这是最后的PVT机型，因此刘海的大小基本不会再调整了。</p>
+<p>视频中所显示的刘海看起来似乎比iPhone 11 Pro Max要小一些、窄一些，不过Prosser说，这主要是因为屏幕变大了，所以看起来刘海小了。</p>
+<p><img src="https://img.36krcdn.com/20200827/v2_acdc0d4371f44dc1bc1a44d029ee3d00_img_000" alt="img"></p>
+<p><em>▲iPhone 12 Pro Max PVT机型的刘海展示</em></p>
+<p>刘海中保留了前代的Face ID功能，Prosser说Face ID的解锁功能将更快、更准确，同时可以在一个更宽泛的角度实现解锁，方便用户放在桌子上的时候也能成功面部解锁。</p>
+<p>另外，关于外观，iPhone 12 Pro Max的确采用了传言已久的金属边框和直屏设计，大家早就听说，新iPhone的边框很窄，可是到底有多窄呢？</p>
+<p>在视频中，由于环境是全黑的，因此边框并不明显，不过通过提升画面亮度，我们还是可以隐约看到，iPhone 12 Pro Max的极窄边框。</p>
+<p><img src="https://img.36krcdn.com/20200827/v2_b71a958219834b25bb190a1627d4be2d_img_000" alt="img"></p>
+<p><em>▲iPhone 12 Pro Max PVT机型的边框展示</em></p>
+<p>在当下一众安卓旗舰通过曲面屏实现“窄边框”的实觉效果时，苹果直接用直屏“硬刚”，因此边框的控制就显得尤为重要。iPhone 11系列的边框曾被网友笑称能“停航母”，这次，iPhone 12让他们失望了了。得益于更窄的边框，更大的屏幕，刘海看起来也更小了。</p>
+<p>关于手机背面设计，Prosser称iPhone 12 Pro Max的相机模组面积大约提升了10%，因此将比iPhone 11 Pro Max的背部相机模组占据更多背部空间。</p>
+<p>不过有意思的是，Prosser的消息来源称iPhone 12 Pro Max的重量感觉会比iPhone 11 Pro Max轻一些。Prosser认为这可能说明新iPhone的电池更小了。</p>
+<h3 id="听说苹果很“抠门”？"><a href="#听说苹果很“抠门”？" class="headerlink" title="听说苹果很“抠门”？"></a>听说苹果很“抠门”？</h3><p>提到iPhone电池的变化，就在上周，天风证券分析师郭明錤曾发文称，iPhone 12系列的电池板将放弃使用硬板设计，转而采用平均单价更低的软板设计。</p>
+<p>郭明錤说，由于电池板层数减少、面积减少，iPhone  12系列的电池成本将下降40-50%。更早些时候，韩国监管机构SafetyKorea曝光了iPhone 12全系列电池容量，iPhone  12电池容量直接降低至2227mAh，相比上代iPhone 11减少了883mAh，减少了约三分之一</p>
+<p><img src="https://img.36krcdn.com/20200827/v2_2796219e07bd4b1d955d16b0789a9007_img_000" alt="img"></p>
+<p><em>▲SafetyKorea曝光信息</em></p>
+<p>根据Techinsight的拆解显示，iPhone 11 Pro Max的电池成本大约为10.5美元，按照郭明錤所说，降低后成本约为5.5美元。</p>
+<p>苹果2019年大约出货了2亿台iPhone，照此计算，通过电池板“缩水”，每年大约可以为苹果节省下近10亿美元，当然，我们只是粗略估计，苹果卖的iPhone也不可能都是iPhone 11 Pro Max。</p>
+<p>当然，苹果这么做并不是没有原因的，在这一代iPhone上，苹果必须要“竭尽全力”缩减成本，才能勉强保持价格基本不变，因为5G模块的成本目前看来是非常高的。</p>
+<p>据Appleinsider报道，支持sub-6GHz  5G的iPhone  12每台成本将增加75美元，而支持毫米波5G的机型成本则会增加约125美元，这远远不是从电池上可以找回来的成本。这也能解释为什么苹果这次在iPhone 12系列中取消了附赠的充电线和充电头。</p>
+<p>使用5G,对于苹果来说，既是巨大的机遇，也充满了挑战。价格一旦上浮明显，对于出货量的影响将是巨大的，因为智能手机市场中的消费者对于价格都是极其敏感的。</p>
+<p>不过目前从知名苹果爆料人Komiya公布的iPhone  12系列售价来看，iPhone 12系列的价格基本维持与上代相同。iPhone 12起售价格为699美元，iPhone 12  Pro的起售价格为999美元，iPhone 12 Pro Max的起售价格为1099美元。在国内，iPhone  12的其售价可能将会在5499元左右。</p>
+<p><img src="https://img.36krcdn.com/20200827/v2_7663d5643f424026b59075dcf0e2c610_img_000" alt="img"></p>
+<p><em>▲Komiya公布的iPhone 12系列售价</em></p>
+<p>这样的价格，对于消费者来说，很可能会引发一场声势浩大的“换机潮”，因为iPhone  12增加了5G的支持，但价格却维持不变，得益于国内电商的补贴政策，iPhone  12系列在国内的价格很有可能进一步下探至5000以内，成为4000元旗舰安卓手机的有力竞争对手。</p>
+<p><img src="https://img.36krcdn.com/20200827/v2_1cbab729f54d4aa3a25754437e64ef86_img_000" alt="img"></p>
+<p><em>▲Komiya称699美元的iPhone 12是一部“完美的手机”</em></p>
+<h3 id="地表最强手机芯片"><a href="#地表最强手机芯片" class="headerlink" title="地表最强手机芯片"></a>地表最强手机芯片</h3><p>除了今天的剧透，iPhone 12系列的芯片当然也是关注的核心焦点之一。不过关于A14芯片的制程、性能等信息，早在年初就已经曝光。不过今天，台积电近日又公布了其5nm工艺的更多细节信息。</p>
+<p>根据台积电给出的数据，采用5nm工艺生产的A14将会集成150亿个晶体管，相比A13的85亿个晶体管，数目提升了76%。在性能方面，相比7nm工艺，5nm工艺产品性能大约可提升15%左右。</p>
+<p>前不久，Komiya曾爆料称，苹果A14芯片相较于A13芯片，CPU性能提升了40%，GPU性能提升了50%。可以看出，在台积电5nm先进工艺的基础上，苹果必定又进行了一定优化，从而大幅提升了芯片的性能。</p>
+<p><img src="https://img.36krcdn.com/20200827/v2_970c003d283446fda26127e6e3f9d002_img_000" alt="img"></p>
+<p><em>▲台积电公布的各代制程工艺详细信息</em></p>
+<p>能效一直是移动SoC避不开的一个重要话题，苹果A系芯片的高功耗导致的发热降频问题也一直存在于近几代iPhone中。根据台积电公布的信息，5nm工艺比7nm工艺功耗降低约30%，这也一方面说明了苹果为什么敢对电池“动刀”。</p>
+<p>目前A13的CPU和GPU性能已经大幅领先于高通骁龙865、麒麟990等安卓旗舰SoC，而A14的出现，必定会将iPhone和其他安卓手机之间的性能差距进一步拉大。</p>
+<h3 id="结语：苹果5G“核弹”能否引爆2021换机潮？"><a href="#结语：苹果5G“核弹”能否引爆2021换机潮？" class="headerlink" title="结语：苹果5G“核弹”能否引爆2021换机潮？"></a>结语：苹果5G“核弹”能否引爆2021换机潮？</h3><p>进入二季度以来，关于苹果新iPhone 12系列的信息不断爆出，今天，Jon Prosser的工程机所展示的内容，让许多围绕iPhone 12的关键问题有了答案，120Hz高刷采用的几率比较高、激光雷达敲定、超窄边框敲定。</p>
+<p>我们从中可以看出，尽管智能手机发展至今已经越难寻找到新的突破，但是苹果还是在某些方面做到了“极致”，通过强大的研发能力、对供应链的掌控能力，iPhone 12系列虽然“晚跑”了半年，但依然在部分赛道上赶上并反超了部分对手。</p>
+<p>更强的性能、更强的显示效果、更强的拍摄能力，再有5G通信能力的加持，无疑会让新一代iPhone成为库克合同到期前最后一年中的一颗“重磅炸弹”，不过其是否能引爆业内普遍预期的“为期三年的5G换机大潮”，还有待观察。</p>
+<p>今天的曝光，可以说是干货十足，也让以保密闻名的苹果略显“尴尬”，在曝光视频的结尾，Prosser微微一笑，淡淡的说了一句，“Sorry，Tim.”</p>
+<p>来源：Jon Prosser，Komiya，Appleinsider，Phonearena</p>
+<p>摘自36氪<a href="https://36kr.com/p/855456990436224" target="_blank" rel="noopener">https://36kr.com/p/855456990436224</a></p>
+]]></content>
+      <tags>
+        <tag>数码</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我科学家研制出新型钒液流电池电极材料</title>
+    <url>/2020/08/27/%E6%88%91%E7%A7%91%E5%AD%A6%E5%AE%B6%E7%A0%94%E5%88%B6%E5%87%BA%E6%96%B0%E5%9E%8B%E9%92%92%E6%B6%B2%E6%B5%81%E7%94%B5%E6%B1%A0%E7%94%B5%E6%9E%81%E6%9D%90%E6%96%99/</url>
+    <content><![CDATA[<p><img src="https://www.kepuchina.cn/tech/energy/202008/W020200823450995619660.png" alt=""></p>
+<p>　　23日，记者从长沙理工大学获悉，该校丁美、贾传坤教授团队，联合重庆大学教授孙立东、中科院北京纳米能源与系统研究所研究员孙其君，及中科院金属研究所等多个科研团队，利用电沉积和氧化还原靶向催化交叉结合技术，共同开发出了一种大规模储能钒液流电池用的普鲁士蓝复合电极材料，可显著提高钒液流电池功率密度和能量效率。这种新型电极材料，有望助推钒液流电池“提质降本”，为其进一步商业化应用提供了新思路。目前，成果进入应用孵化阶段，这一研究成果也于日前发布于全球工程技术与材料类著名期刊《SMALL》上。</p>
+<p><img src="https://www.kepuchina.cn/tech/energy/202008/W020200823450986105978.jpg" alt=""></p>
+<p>可再生能源开发和利用的迫切性，众所周知。可再生能源的快速发展，则有赖于高安全、低成本、长寿命的大规模储能新技术。电化学储能，是储能技术的一个重要分支。其中，钒液流电池因具有循环寿命长、安全可靠、功率与容量独立等优点，是目前最有应用前景的大规模储能技术之一。不过，要将这类电池产业化，则“受制”于电池性能和成本。电极材料是决定钒液流电池功率成本和效率的关键材料之一。目前，最常用的电极材料为碳毡或石墨毡，这类电极材料对钒离子的催化活性低，比表面积也低，成为钒液流电池“提质降本”，进入商业化应用的瓶颈。寻找到高活性、低成本的电极材料，是业内专家研究的热点和重点。</p>
+<p><img src="https://www.kepuchina.cn/tech/energy/202008/W020200823450988779939.png" alt=""></p>
+<p>研究团队历时3年，开发了该种普鲁士蓝复合电极，有效提升了钒离子反应活性，从而显著提高了钒液流电池功率密度和能量效率。“用这个复合电极组装的钒液流电池，功率密度较碳毡电极提升了50%以上。在100毫安每平方厘米的电流密度下，能量效率甚至超过88%。”丁美说。</p>
+<p>摘自科普中国<a href="https://www.kepuchina.cn/tech/energy/202008/t20200823_2670208.shtml" target="_blank" rel="noopener">https://www.kepuchina.cn/tech/energy/202008/t20200823_2670208.shtml</a></p>
+]]></content>
+      <tags>
+        <tag>科普</tag>
       </tags>
   </entry>
   <entry>
@@ -374,108 +484,65 @@
       </tags>
   </entry>
   <entry>
-    <title>我科学家研制出新型钒液流电池电极材料</title>
-    <url>/2020/08/27/%E6%88%91%E7%A7%91%E5%AD%A6%E5%AE%B6%E7%A0%94%E5%88%B6%E5%87%BA%E6%96%B0%E5%9E%8B%E9%92%92%E6%B6%B2%E6%B5%81%E7%94%B5%E6%B1%A0%E7%94%B5%E6%9E%81%E6%9D%90%E6%96%99/</url>
-    <content><![CDATA[<p><img src="https://www.kepuchina.cn/tech/energy/202008/W020200823450995619660.png" alt=""></p>
-<p>　　23日，记者从长沙理工大学获悉，该校丁美、贾传坤教授团队，联合重庆大学教授孙立东、中科院北京纳米能源与系统研究所研究员孙其君，及中科院金属研究所等多个科研团队，利用电沉积和氧化还原靶向催化交叉结合技术，共同开发出了一种大规模储能钒液流电池用的普鲁士蓝复合电极材料，可显著提高钒液流电池功率密度和能量效率。这种新型电极材料，有望助推钒液流电池“提质降本”，为其进一步商业化应用提供了新思路。目前，成果进入应用孵化阶段，这一研究成果也于日前发布于全球工程技术与材料类著名期刊《SMALL》上。</p>
-<p><img src="https://www.kepuchina.cn/tech/energy/202008/W020200823450986105978.jpg" alt=""></p>
-<p>可再生能源开发和利用的迫切性，众所周知。可再生能源的快速发展，则有赖于高安全、低成本、长寿命的大规模储能新技术。电化学储能，是储能技术的一个重要分支。其中，钒液流电池因具有循环寿命长、安全可靠、功率与容量独立等优点，是目前最有应用前景的大规模储能技术之一。不过，要将这类电池产业化，则“受制”于电池性能和成本。电极材料是决定钒液流电池功率成本和效率的关键材料之一。目前，最常用的电极材料为碳毡或石墨毡，这类电极材料对钒离子的催化活性低，比表面积也低，成为钒液流电池“提质降本”，进入商业化应用的瓶颈。寻找到高活性、低成本的电极材料，是业内专家研究的热点和重点。</p>
-<p><img src="https://www.kepuchina.cn/tech/energy/202008/W020200823450988779939.png" alt=""></p>
-<p>研究团队历时3年，开发了该种普鲁士蓝复合电极，有效提升了钒离子反应活性，从而显著提高了钒液流电池功率密度和能量效率。“用这个复合电极组装的钒液流电池，功率密度较碳毡电极提升了50%以上。在100毫安每平方厘米的电流密度下，能量效率甚至超过88%。”丁美说。</p>
-<p>摘自科普中国<a href="https://www.kepuchina.cn/tech/energy/202008/t20200823_2670208.shtml" target="_blank" rel="noopener">https://www.kepuchina.cn/tech/energy/202008/t20200823_2670208.shtml</a></p>
+    <title>直播的2.0时代</title>
+    <url>/2021/08/13/%E7%9B%B4%E6%92%AD%E7%9A%842-0%E6%97%B6%E4%BB%A3/</url>
+    <content><![CDATA[<h1 id="直播的2-0时代：从“大水漫灌”到“流量入渠”"><a href="#直播的2-0时代：从“大水漫灌”到“流量入渠”" class="headerlink" title="直播的2.0时代：从“大水漫灌”到“流量入渠”"></a>直播的2.0时代：从“大水漫灌”到“流量入渠”</h1><p>从2016年的千播大战到2020年的抗击疫情，它成为为数不多的当下能够对宏观经济进行正向刺激，也收获正向刺激的领域。</p>
+<p><img src="https://img.36krcdn.com/20200427/v2_9e9feb6a9a6a4c75bb4a3ba4394f2d52_img_jpg" alt="img"></p>
+<p>导语：对于已经熟透了的<a href="https://36kr.com/projectDetails/25386" target="_blank" rel="noopener">中国移动</a>互联网来说，没有什么比一个短期风口变成长期风口，更令人兴奋的。</p>
+<p>直播就是这样一个机会，从2016年的千播大战到2020年的抗击疫情，它成为为数不多的当下能够对宏观经济进行正向刺激，也收获正向刺激的领域。</p>
+<p>所以这个行业的发展一日千里，昨天的认知到了今天可能就会过时。而本文则通过大环境、小切口和大机会三个维度，为你解读直播领域的最新变化。</p>
+<h2 id="01-被无限拉长的风口"><a href="#01-被无限拉长的风口" class="headerlink" title="01 被无限拉长的风口"></a>01 被无限拉长的风口</h2><p>在60天前，不，可能只是30天前，人们对于直播的价值认知还是完全不一样的。</p>
+<p>此前，深受大家信赖的上海华山医院的张文宏教授做了一个疫情预测：最好的结果，疫情2-4个月内<a href="https://36kr.com/projectDetails/95377" target="_blank" rel="noopener">得到</a>控制；中等结果，6-12个月内控制；最不想遇到的结果：全球大流行，无法预言何时能够停止。</p>
+<p>或许是出于乐观，或者是出于对尽早回归正常生活的期望，包括笔者在内的绝大多数人都相信第一种结果的出现可能性最大。</p>
+<p>但是，改变终究是发生了。《人类简史》作者尤瓦尔·赫拉利说：“是的，危机终将过去，我们大多数人会幸免于难——但是我们生活的世界将不再一样。</p>
+<p>改变不了的事实是，这是历史的又一个拐点。但对于直播来说，这却是一个空前难得的机遇。</p>
+<p>传统直播的核心用户并不太多，单一平台很难过亿。大家可以发现，直播类似于看电影，必须你看准时间、专心等候，才能够看完一场直播。对于生活无限碎片化的我们，其实这样的时候并不太多。</p>
+<p>基于以上原因，传统直播本身的流量效应不明显，独立很难撑起一个大的商业模式，因此只有那些超级平台，如<a href="https://36kr.com/projectDetails/27269" target="_blank" rel="noopener">陌陌</a>、淘宝、抖音、<a href="https://36kr.com/projectDetails/30859" target="_blank" rel="noopener">快手</a>等加入进来之后，直播才真正进入全民时代。</p>
+<p>然而，疫情打破了这些直播行业的“定律”。最核心的也是两点：</p>
+<p>1、国内抗疫阶段性成果显现，国际倒灌风险不断攀升。</p>
+<p>我们已经大概率进入后疫情时代，抗疫时间将以年而不是日、月来计算。考虑到宏观防控和微观自我防护的多重因素，在未来很长一段时间里，全民宅家将是生活的主流，这就为直播创造了前所未有的场景——人们开始有大块、整块的时间需要填充。</p>
+<p>2、直播从替代性方案变成取代性方案。</p>
+<p>疫情横扫之下，一切依赖线下场景的生意都遭遇重创，如出行、旅游、零售、餐饮，而且是刚性冲击。</p>
+<p>幸好，我们还有直播和快递。由于线下场景遭遇困难，一切凡是可以借助于线上渠道售卖的生意，都开始投奔直播，视为救命稻草。</p>
+<p>有机构预测，国内整个直播市场在2019年市场规模是4338亿元，在2020年的时候，整个市场规模预计可以达到9610亿元，2021年这个必是一个万亿级规模的市场。</p>
+<p>也就是说，直播市场将在2019年的基础上翻一番。这在以前，是一个不可想象的数字，因为中国移动互联网的红利早已消退。但在疫情这种不可抗力的外力作用下，直播反而迎来最好的发展机遇期。</p>
+<h2 id="02-直播正在向2-0进化"><a href="#02-直播正在向2-0进化" class="headerlink" title="02 直播正在向2.0进化"></a>02 直播正在向2.0进化</h2><p>作为企业，你其实首先要选择，是要大直播，还是小直播？</p>
+<p>2019年，中国网民达到了8.54亿，其中有4.3亿都是直播观众，在网民当中每两个人就有一个是网络直播的观众，这种渗透率甚至超过了电商。</p>
+<p>当然，真正让直播超常规爆发的，还是因为后疫情时代造成的线下消费萎缩。为了博取转危为机的一线生机，大量的企业开始涌入直播这条路，希望借直播打通线上环节。</p>
+<p>直播虽然号称“万能”，但真正能用好直播的公司并不是太多。</p>
+<p>为什么这么说呢？是因为现在绝大多数希望搭上直播这班快车的企业，都有三个问题：对直播缺乏真正的系统规划能力；没有好的主播人才；在流量，特别是私域流量的线上运营方面，没有系统的方法论。</p>
+<p>直播的规划能力有多重要呢？红人电商服务平台“盟眺”的蒙宇宁说过一句话：“一场直播，别看短短的两个小时，其实后期工作用办一台‘小春晚’来做比喻，一点都不过分。如何场控，如何设计前期人气的氛围打造，现场如何诱导，如何切入商品，如何用不同的运营节奏……名堂太多了。”</p>
+<p>相对于缺乏直播经验，更大的问题还在于人才和流量。</p>
+<p>非常多的企业认为，切入直播只需要砸钱就行，砸钱就能请明星、人气主播，就能买流量。</p>
+<p>应该说，这种“大水漫灌”式的直播思路，还停留在粗暴的1.0时代。</p>
+<p>从2016年的千播大战到现在，数千家运营直播的企业共识但不太愿意说的一个秘密是——请明星或者超级IP来做直播，是一个性价比特别低的事情。</p>
+<p>大家可能总是盯着大牌红人给直播间带来的单场流量和单场销量，但极少有人知道，这种直播的短期效果很好，但长期的性价比特别低。</p>
+<p>大牌红人为什么能短期内带来爆发式的流量？并不是他们特别漂亮或聪明，而是他们有一套长期的运营和积累粉丝的方法，在有了互联网赋予的互动能力后，这种方法得到空前的加强……这带来的一个直接的后果就是，粉丝跟着明星、头部主播走，人在粉丝在，人走粉丝走，真正的留存和复购根本无法规模化实现，长期ROI特别的低。</p>
+<p>那么，我们以导流和频次来提升ROI行不行？客观说，也不太行。中国已经有超过15亿的手机用户和12.7亿的智能手机用户，互联网渗透率全球领先，这几个数字意味着公域流量早已见底，换言之，公域流量非常之贵，如果直接从公域买量绝对超出大部分企业的承受能力，土豪除外。</p>
+<p>所以笔者的观点是，我们的直播行业，以及疫情经济对直播的期望，正在倒逼我们的直播企业快速走过大水漫灌的直播1.0时代，进入精细化运营、深耕私域流量和实现公私流量良性互动闭环的直播2.0时代。</p>
+<h2 id="03-大背景下的“小切口”"><a href="#03-大背景下的“小切口”" class="headerlink" title="03 大背景下的“小切口”"></a>03 大背景下的“小切口”</h2><p>我们来看最近直播领域的一件“小事”。</p>
+<p><a href="https://www.36dianping.com/space/4731201232" target="_blank" rel="noopener">微盟</a>智慧商业事业群副总裁凌芸在4月18日的直播电商云峰会上表示：“直播是需要流量和用户滋养的，微盟直播从公域蓄水、私域流量沉淀到多场景转化，构建全链路闭环”。</p>
+<p>我们首先要给这句话的理解铺陈一个重要的前提，即第三方服务商的扶持计划基于一个前提——那就是微信小程序的开放和赋能。</p>
+<p>作为全球用户数量数一数二的社交生态，以及在这种生态上成长起来的微盟，微信小程序都承担着一个至关重要的作用，即承载用户在生态的多场景中来回切换的“传送门”的角色。</p>
+<p>直播，本身即是一个强烈依赖社交传播的场景，而微盟直播借助微信小程序的技术，可以有效的帮助直播的多方参与者，通过对话框、微信群、朋友圈，对直播的内容或者是直播中的商品进行推荐和传播，而微信用户则可以通过小程序提供的各种通路，快速的切入直播、在直播间里和<a href="https://36kr.com/projectDetails/192836" target="_blank" rel="noopener">粉丝互动</a>，还可以方便的引导用户进入微盟为商家所提供的小程序商城系统，形成良好的转化。</p>
+<p>正是因为微盟和微信之间的打通，达到了互融互通的程度，而这种场景跳转恰是以前的直播平台不能或很难实现的，所以笔者才有才进入2.0时代这个提法。</p>
+<p>所谓代际更迭和无缝连接，必然要求基础设施的焕新。而这次，最基础的基础设施已经由微信完成，商业的基础设施已经由微盟完成，而用户的导入、私域流量的运营、直播能力的打造，则由微信、微盟和微盟核心用户共同完成，所以，我们才会经常听到一种说法——直播小程序上的直播间是离用户最近的直播间。</p>
+<p>首先我们来看看直播的典型核心用户——林清轩、梦洁家纺、<a href="https://36kr.com/projectDetails/574687" target="_blank" rel="noopener">台铃</a>电动车等……这些企业的共同特点是，已有较多的线下门店，也有一定的线上商城的运营经验和私域流量积累，但在疫情考验下，急需借力直播提振销量。</p>
+<p>用林清轩创始人孙来春的话说就是：“这场疫情没有一个人能独善其身，实体店必须借助小程序和直播加速数字化转型。”</p>
+<p>要借力直播，首先的一个问题就是流量。对于直播的大部分商家来说，有一个很大的有利因素就是此前积累了许多私域流量，但如何转化并导流给线上直播，是个大问题。</p>
+<p>所以，私域流量的规划和运营很重要。比如，林清轩借助微盟直播小程开启的首场小程序直播，在直播前调动1600多位林清门店导购建立3000个客户群，成为林清轩小程序直播的宝贵流量入口，这就是典型的有规划运营。</p>
+<p>直播对于企业的第二个问题，是主播问题。在商家的直播中，企业创始人出阵，是一种比较常见的安排，但这也非唯一的选择。盟眺的负责人蒙宇宁概括的非常精彩，他认为直播的阶段可以分为“他播”、“自播“、“人人播”三个阶段，简而言之，就是先借力于成熟主播，进而衍生到由非常熟悉企业的创业者、企业家、管理者去直播，最后实现企业中有普遍具备直播能力的导购甚至员工来播，这样的三步走原则。</p>
+<p>林清轩的直播中有一款市场价接近2千元一套的高端产品——黑金系列，以前整个终端线下门店一个月才能卖400套。在孙来春亲自上阵直播后，由于对自己的产品高度熟悉和自信，在直播现场发挥极好，很多用户都被这位企业家的真诚和专业打动，以至于一次直播就销售了400多套，这就是“自播”的魅力。</p>
+<p>然而，从一个企业的长期发展来看，依赖于“自播”并不总能奏效，也并非每个创业者、企业家都适合直播这种方式。</p>
+<p>更深层次的原因是，直播发展到今天，已经是一个系统工程，它已经是一个由基础设施、商业设施、模式闭环、创业策划、红人资源组合而成的系统工程。一个即使有多年电商经验的企业，要实现从直播到带货到常态化运营的行云流水，其从0到1的过程都充满不确定性。</p>
+<p>直播，应该是一种赋能而不是负担，是一条越走越宽的通路而不是一座收割智商税的“窄门”。而从微盟扶持计划的系统性来看，无疑正在贯彻前一种理念。</p>
+<h2 id="04-结语：小切口后面的大生态"><a href="#04-结语：小切口后面的大生态" class="headerlink" title="04 结语：小切口后面的大生态"></a>04 结语：小切口后面的大生态</h2><p>到了该谈论一些结论性的问题了。</p>
+<p>我们前面反复提到微信小程序，其实，微信正是目前移动生态中水量最高的“流量池”，拥有11亿以上的活跃用户。而恰好得自于微信基因中的克制，微信生态在进行商业转化中一直非常节制，所以我们的朋友圈才没有被广告所填满。</p>
+<p>但可以想见，作为一个王国，微信必然有自己的商业变现规划，而直播风口是一个几年里都不会再出现的系统性机会。所以，我们已然看到微信生态必然和直播风口进行更好的商业适配，而微盟这种本身就基于微信生态的第三方服务商，一定能够帮助客户更好地激活微信平台的公域流量，成为一块生机勃勃的新兴之地。</p>
+<p>而从另一个角度来看，诸如微盟打造的直播扶持计划也好、“<a href="https://36kr.com/projectDetails/80778" target="_blank" rel="noopener">超级直播</a>间”也罢，其实都意味着直播生态的第三方全方位解决方案提供者的角色正在脱颖而出。纵观中国移动互联网的发展史，无论是千团大战、千播大战还是近年的云计算、AI风口，一个能够为行业提供完整方案的第三方机构群体的出现，都是这个行业走向成熟的标志。</p>
 ]]></content>
       <tags>
-        <tag>科普</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>iPhone12首个工程机解密：高刷、激光雷达实锤，解密五大疑团</title>
-    <url>/2020/08/29/iPhone12%E9%A6%96%E4%B8%AA%E5%B7%A5%E7%A8%8B%E6%9C%BA%E8%A7%A3%E5%AF%86%EF%BC%9A%E9%AB%98%E5%88%B7%E3%80%81%E6%BF%80%E5%85%89%E9%9B%B7%E8%BE%BE%E5%AE%9E%E9%94%A4%EF%BC%8C%E8%A7%A3%E5%AF%86%E4%BA%94%E5%A4%A7%E7%96%91%E5%9B%A2/</url>
-    <content><![CDATA[<blockquote>
-<p>这可能是iPhone 12发布之前，最全的一次剧透了。</p>
-</blockquote>
-<hr>
-<p>作者 云鹏</p>
-<p>智东西8月26日消息，今天知名苹果爆料人Jon Prosser发布了关于iPhone 12 Pro Max“工程机”的关键信息，根据爆料，iPhone 12 Pro Max“很可能”将采用120Hz高刷屏，并且激光雷达确认搭载，将为相机提供自动对焦支持。</p>
-<p>目前这些泄露的信息均来自iPhone 12 Pro  Max的PVT（Production Validation Test）机型，也就是“生产验证测试”机型，Jon  Prosser说，PVT已经是量产前的最后一步了，因此PVT版本与最终的量产版本之间的差别已经非常小了，可参考的价值非常高。</p>
-<p><img src="https://img.36krcdn.com/20200827/v2_d20a9568f1f846bf9a4ac9c288d066e8_img_000" alt="img"></p>
-<p><em>▲Prosser给出的关于PVT机型的说明</em></p>
-<p>不过，PVT机型的出炉也侧面证明了，今年的iPhone 12系列生产的确向后延迟了，有一些国内网友也表示，过去富士康这个时候早就大批量招工了，但今年显然推迟了招工时间。Prosser称，iPhone 12系列的大规模批量生产将在下个月进行。<br><img src="https://img.36krcdn.com/20200827/v2_ae7c9cd7eca240c69be340b5f91f7e66_img_000" alt="img"></p>
-<p><em>▲Jon Prosser</em></p>
-<p>另外从Prosser发布的视频来看，由于“极窄边框”和更大的屏幕，iPhone 12 Pro Max的刘海看起来更小了，并且由于电池规模缩小，整机的重量更轻。今天有外媒报道称，苹果正在研究将AirPods  Pro用到的SiP封装工艺应用于电池电路板的设计中，这无疑会成为改善手机内部空间利用率的又一重要技术尝试。</p>
-<p>现在已经是9月最后一周，iPhone  12系列的预计售价、外观设计、芯片性能、拍照模组、屏幕刷新率、电池容量等关键信息均已曝光，很多信息都已经接近“实锤”。苹果iPhone  12系列的正式发布，无疑成为整个智能手机行业下半年最重要的事件之一，作为苹果的首款5G手机，iPhone  12可能是苹果通往3万亿市值的重要一步。</p>
-<p>因此我们将在这个关键节点，对iPhone 12系列进行一次“终极剧透”。<br><img src="https://img.36krcdn.com/20200827/v2_53ae1f5af7224be2994af864fed74062_img_000" alt="img"></p>
-<p><em>▲iPhone 12系列部分机型曝光模具与其他iPhone机型的对比</em></p>
-<h3 id="苹果120Hz仍在验证，“高刷选项”已出现"><a href="#苹果120Hz仍在验证，“高刷选项”已出现" class="headerlink" title="苹果120Hz仍在验证，“高刷选项”已出现"></a>苹果120Hz仍在验证，“高刷选项”已出现</h3><p>关于新iPhone 12系列，最引人关注的，除了价格，就是屏幕刷新率的问题。从2019年5月开始，安卓阵营就已经快速踏入了高刷新率时代，90Hz机型频频发布，今年2月，三星S20系列也采用了120Hz屏幕，正式加入高刷阵营。</p>
-<p>目前在全球出货量排名前六的智能手机厂商中，仅剩苹果没有采用高刷新率屏幕，依然是60Hz，诚然，iOS系统的高流畅度可以一定程度上缓解没有高刷的问题，但50%或者一倍的帧数差距确是实际存在的。</p>
-<p>这一次，Prosser曝光的iPhone 12 Pro Max PVT机型的系统显示设置中，增加了高刷新率选项，允许开启120Hz模式。</p>
-<p><img src="https://img.36krcdn.com/20200827/v2_ea5bb7d1017445af82b2bc39f3ce10f5_img_000" alt="img"></p>
-<p><em>▲iPhone 12 Pro Max PVT机型中的高刷新率及自适应刷新率选项</em></p>
-<p>但是有意思的是，并不是所有PVT机型都能支持120Hz刷新率，Prosser说，他被告知大约有一半的机器是可以开启的，另一半不支持。这说明了一个问题，苹果直到现在还没有最终敲定，120Hz是上，还是不上。</p>
-<p>也就是说，即便下个月马上就要大规模量产了，苹果现在仍然在测试120Hz的可行性，可以说，苹果的确有一颗“大心脏”，同时供应链的生产能力也足够让苹果放心。当然，苹果一定是愿意克服困难将其实现的，毕竟一旦实现，这将成为新iPhone 12系列的另一项重要优势。</p>
-<p>Prosser称，他的消息来源曾对他说，目前通过系统选项手动开启的120Hz，在iPhone 12 Pro Max上暂时运行正常。</p>
-<p><img src="https://img.36krcdn.com/20200827/v2_c873bbeb3d9d4dd680edeab5711c53ad_img_000" alt="img"></p>
-<p><em>▲Prosser的消息来源对于120Hz高刷运行情况的描述</em></p>
-<p><img src="https://img.36krcdn.com/20200827/v2_8c292554fa67487abb9b3d29a9221662_img_000" alt="img"></p>
-<p><em>▲为了保证系统选项截图的真实性，Prosser录制了视频来证明</em></p>
-<p>除了高刷新率选项，苹果还提供了一个“自适应刷新率（Adaptive Refresh  Rate）”选项，允许系统动态调整屏幕刷新率，从60Hz到120Hz，这与三星S20系列和N20系列的高刷选项是一样的，都是自适应刷新率，这样做也是为了节省功耗，延长电池寿命。</p>
-<p>其实早在2017年的iPad  Pro上，苹果就采用了120Hz的LCD屏幕。可以说，苹果对高刷并不陌生，甚至用在产品中的时间要早于很多安卓手机厂商，但后来苹果一直没有将120Hz下放到iPhone上，有业内人士认为苹果对高刷要求很高，很多地方都要慢慢优化，拖了三年，看来苹果终于要“交卷”了。</p>
-<p><img src="https://img.36krcdn.com/20200827/v2_eca7332dc6df4e608634361b44710a0b_img_000" alt="img"></p>
-<p><em>▲2017年首款搭载120Hz屏幕的iPad Pro发布</em></p>
-<p>从7月底到8月整月，关于iPhone 12系列是否将采用高刷的讨论就一直没有停止，进入八月下旬，许多曝光博主都表示苹果很可能将放弃120Hz高刷了。这一次，Prosser的截图和视频无疑大幅提升了iPhone 12系列将采用120Hz高刷的可能性。</p>
-<h3 id="第一部搭载激光雷达的手机来了"><a href="#第一部搭载激光雷达的手机来了" class="headerlink" title="第一部搭载激光雷达的手机来了"></a>第一部搭载激光雷达的手机来了</h3><p>根据Prosser展示的一张系统相机设置的截图来看，激光雷达已经确认将会出现在iPhone 12 Pro Max上，但是否会在iPhone 12、iPhone 12 Max以及iPhone 12 Pro上出现仍然不能确定。</p>
-<p><img src="https://img.36krcdn.com/20200827/v2_636690bca6b0475aaa721dea2dc6c9bb_img_000" alt="img"></p>
-<p><em>▲iPhone 12 Pro Max PVT机型中的激光雷达选项</em></p>
-<p>iPhone 12 Pro Max上的这枚激光雷达的主要功能是辅助相机进行自动对焦，同时提升视频拍摄和夜景拍摄时的目标检测能力。</p>
-<p>值得一提的是，iPhone 12 Pro  Max将支持最高4K 120FPS的视频录制以及4K 240FPS的慢动作拍摄。目前主流的安卓旗舰手机普遍最高仅支持4K  60FPS的视频拍摄，可以说，在iPhone本就明显具有优势的视频拍摄领域，苹果又进一步甩开了竞争对手们。</p>
-<p><img src="https://img.36krcdn.com/20200827/v2_03baae98e91c4feeb6291952c11ea233_img_000" alt="img"></p>
-<p><em>▲iPhone 12 Pro Max PVT机型中的增强视频拍摄选项</em></p>
-<p><img src="https://img.36krcdn.com/20200827/v2_66f2a743ddf74f5db5a4e1a7638eb6b8_img_000" alt="img"></p>
-<p><em>▲iPhone 12 Pro Max PVT机型中的高级降噪、高色深拍摄、变焦等选项</em></p>
-<h3 id="“小”刘海，“大”相机，边框不再“停航母”"><a href="#“小”刘海，“大”相机，边框不再“停航母”" class="headerlink" title="“小”刘海，“大”相机，边框不再“停航母”"></a>“小”刘海，“大”相机，边框不再“停航母”</h3><p>除了屏幕和拍照，iPhone 12系列到底长什么样子，有没有刘海，刘海有多大？也是备受关注的，毕竟现在旗舰手机也进入了一个“看脸”的时代。</p>
-<p>根据Prosser曝光的视频来看，iPhone 12 Pro Max仍然会采用刘海屏设计，由于这是最后的PVT机型，因此刘海的大小基本不会再调整了。</p>
-<p>视频中所显示的刘海看起来似乎比iPhone 11 Pro Max要小一些、窄一些，不过Prosser说，这主要是因为屏幕变大了，所以看起来刘海小了。</p>
-<p><img src="https://img.36krcdn.com/20200827/v2_acdc0d4371f44dc1bc1a44d029ee3d00_img_000" alt="img"></p>
-<p><em>▲iPhone 12 Pro Max PVT机型的刘海展示</em></p>
-<p>刘海中保留了前代的Face ID功能，Prosser说Face ID的解锁功能将更快、更准确，同时可以在一个更宽泛的角度实现解锁，方便用户放在桌子上的时候也能成功面部解锁。</p>
-<p>另外，关于外观，iPhone 12 Pro Max的确采用了传言已久的金属边框和直屏设计，大家早就听说，新iPhone的边框很窄，可是到底有多窄呢？</p>
-<p>在视频中，由于环境是全黑的，因此边框并不明显，不过通过提升画面亮度，我们还是可以隐约看到，iPhone 12 Pro Max的极窄边框。</p>
-<p><img src="https://img.36krcdn.com/20200827/v2_b71a958219834b25bb190a1627d4be2d_img_000" alt="img"></p>
-<p><em>▲iPhone 12 Pro Max PVT机型的边框展示</em></p>
-<p>在当下一众安卓旗舰通过曲面屏实现“窄边框”的实觉效果时，苹果直接用直屏“硬刚”，因此边框的控制就显得尤为重要。iPhone 11系列的边框曾被网友笑称能“停航母”，这次，iPhone 12让他们失望了了。得益于更窄的边框，更大的屏幕，刘海看起来也更小了。</p>
-<p>关于手机背面设计，Prosser称iPhone 12 Pro Max的相机模组面积大约提升了10%，因此将比iPhone 11 Pro Max的背部相机模组占据更多背部空间。</p>
-<p>不过有意思的是，Prosser的消息来源称iPhone 12 Pro Max的重量感觉会比iPhone 11 Pro Max轻一些。Prosser认为这可能说明新iPhone的电池更小了。</p>
-<h3 id="听说苹果很“抠门”？"><a href="#听说苹果很“抠门”？" class="headerlink" title="听说苹果很“抠门”？"></a>听说苹果很“抠门”？</h3><p>提到iPhone电池的变化，就在上周，天风证券分析师郭明錤曾发文称，iPhone 12系列的电池板将放弃使用硬板设计，转而采用平均单价更低的软板设计。</p>
-<p>郭明錤说，由于电池板层数减少、面积减少，iPhone  12系列的电池成本将下降40-50%。更早些时候，韩国监管机构SafetyKorea曝光了iPhone 12全系列电池容量，iPhone  12电池容量直接降低至2227mAh，相比上代iPhone 11减少了883mAh，减少了约三分之一</p>
-<p><img src="https://img.36krcdn.com/20200827/v2_2796219e07bd4b1d955d16b0789a9007_img_000" alt="img"></p>
-<p><em>▲SafetyKorea曝光信息</em></p>
-<p>根据Techinsight的拆解显示，iPhone 11 Pro Max的电池成本大约为10.5美元，按照郭明錤所说，降低后成本约为5.5美元。</p>
-<p>苹果2019年大约出货了2亿台iPhone，照此计算，通过电池板“缩水”，每年大约可以为苹果节省下近10亿美元，当然，我们只是粗略估计，苹果卖的iPhone也不可能都是iPhone 11 Pro Max。</p>
-<p>当然，苹果这么做并不是没有原因的，在这一代iPhone上，苹果必须要“竭尽全力”缩减成本，才能勉强保持价格基本不变，因为5G模块的成本目前看来是非常高的。</p>
-<p>据Appleinsider报道，支持sub-6GHz  5G的iPhone  12每台成本将增加75美元，而支持毫米波5G的机型成本则会增加约125美元，这远远不是从电池上可以找回来的成本。这也能解释为什么苹果这次在iPhone 12系列中取消了附赠的充电线和充电头。</p>
-<p>使用5G,对于苹果来说，既是巨大的机遇，也充满了挑战。价格一旦上浮明显，对于出货量的影响将是巨大的，因为智能手机市场中的消费者对于价格都是极其敏感的。</p>
-<p>不过目前从知名苹果爆料人Komiya公布的iPhone  12系列售价来看，iPhone 12系列的价格基本维持与上代相同。iPhone 12起售价格为699美元，iPhone 12  Pro的起售价格为999美元，iPhone 12 Pro Max的起售价格为1099美元。在国内，iPhone  12的其售价可能将会在5499元左右。</p>
-<p><img src="https://img.36krcdn.com/20200827/v2_7663d5643f424026b59075dcf0e2c610_img_000" alt="img"></p>
-<p><em>▲Komiya公布的iPhone 12系列售价</em></p>
-<p>这样的价格，对于消费者来说，很可能会引发一场声势浩大的“换机潮”，因为iPhone  12增加了5G的支持，但价格却维持不变，得益于国内电商的补贴政策，iPhone  12系列在国内的价格很有可能进一步下探至5000以内，成为4000元旗舰安卓手机的有力竞争对手。</p>
-<p><img src="https://img.36krcdn.com/20200827/v2_1cbab729f54d4aa3a25754437e64ef86_img_000" alt="img"></p>
-<p><em>▲Komiya称699美元的iPhone 12是一部“完美的手机”</em></p>
-<h3 id="地表最强手机芯片"><a href="#地表最强手机芯片" class="headerlink" title="地表最强手机芯片"></a>地表最强手机芯片</h3><p>除了今天的剧透，iPhone 12系列的芯片当然也是关注的核心焦点之一。不过关于A14芯片的制程、性能等信息，早在年初就已经曝光。不过今天，台积电近日又公布了其5nm工艺的更多细节信息。</p>
-<p>根据台积电给出的数据，采用5nm工艺生产的A14将会集成150亿个晶体管，相比A13的85亿个晶体管，数目提升了76%。在性能方面，相比7nm工艺，5nm工艺产品性能大约可提升15%左右。</p>
-<p>前不久，Komiya曾爆料称，苹果A14芯片相较于A13芯片，CPU性能提升了40%，GPU性能提升了50%。可以看出，在台积电5nm先进工艺的基础上，苹果必定又进行了一定优化，从而大幅提升了芯片的性能。</p>
-<p><img src="https://img.36krcdn.com/20200827/v2_970c003d283446fda26127e6e3f9d002_img_000" alt="img"></p>
-<p><em>▲台积电公布的各代制程工艺详细信息</em></p>
-<p>能效一直是移动SoC避不开的一个重要话题，苹果A系芯片的高功耗导致的发热降频问题也一直存在于近几代iPhone中。根据台积电公布的信息，5nm工艺比7nm工艺功耗降低约30%，这也一方面说明了苹果为什么敢对电池“动刀”。</p>
-<p>目前A13的CPU和GPU性能已经大幅领先于高通骁龙865、麒麟990等安卓旗舰SoC，而A14的出现，必定会将iPhone和其他安卓手机之间的性能差距进一步拉大。</p>
-<h3 id="结语：苹果5G“核弹”能否引爆2021换机潮？"><a href="#结语：苹果5G“核弹”能否引爆2021换机潮？" class="headerlink" title="结语：苹果5G“核弹”能否引爆2021换机潮？"></a>结语：苹果5G“核弹”能否引爆2021换机潮？</h3><p>进入二季度以来，关于苹果新iPhone 12系列的信息不断爆出，今天，Jon Prosser的工程机所展示的内容，让许多围绕iPhone 12的关键问题有了答案，120Hz高刷采用的几率比较高、激光雷达敲定、超窄边框敲定。</p>
-<p>我们从中可以看出，尽管智能手机发展至今已经越难寻找到新的突破，但是苹果还是在某些方面做到了“极致”，通过强大的研发能力、对供应链的掌控能力，iPhone 12系列虽然“晚跑”了半年，但依然在部分赛道上赶上并反超了部分对手。</p>
-<p>更强的性能、更强的显示效果、更强的拍摄能力，再有5G通信能力的加持，无疑会让新一代iPhone成为库克合同到期前最后一年中的一颗“重磅炸弹”，不过其是否能引爆业内普遍预期的“为期三年的5G换机大潮”，还有待观察。</p>
-<p>今天的曝光，可以说是干货十足，也让以保密闻名的苹果略显“尴尬”，在曝光视频的结尾，Prosser微微一笑，淡淡的说了一句，“Sorry，Tim.”</p>
-<p>来源：Jon Prosser，Komiya，Appleinsider，Phonearena</p>
-<p>摘自36氪<a href="https://36kr.com/p/855456990436224" target="_blank" rel="noopener">https://36kr.com/p/855456990436224</a></p>
-]]></content>
-      <tags>
-        <tag>数码</tag>
+        <tag>资讯 科普</tag>
       </tags>
   </entry>
   <entry>
